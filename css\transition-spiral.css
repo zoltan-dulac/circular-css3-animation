@@ -1,0 +1,54 @@
+body.big-page, #example {
+	background: #333333;
+	overflow: hidden;
+	background: url('../images/space.jpg');
+}
+
+.entry img {
+	border: none;
+}
+
+
+#mainContent, #example {
+	position: relative;
+	display: block;
+	width: 800px;
+	
+	margin: 0 auto;
+	height: 800px;
+	overflow: visible;
+	border: dashed 1px #990000;
+}
+
+#jupiter {
+	position: absolute;
+	
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	
+	top: -100px;
+	left: 0px; 
+
+	-webkit-transform: rotate(0deg) translateX(1000px) rotate(0deg) scale(1);
+	-moz-transform: rotate(0deg) translateX(1000px) rotate(0deg) scale(1);
+	-o-transform: rotate(0deg) translateX(1000px) rotate(0deg) scale(1);
+	-ms-transform: rotate(0deg) translateX(1000px) rotate(0deg) scale(1);
+	transform: rotate(0deg) translateX(1000px) rotate(0deg) scale(1);
+	
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
+
+#example:active #jupiter,
+#mainContent:active #jupiter {
+	-webkit-transform: rotate(270deg) translateX(00px) rotate(-270deg) scale(0);
+	-moz-transform: rotate(270deg) translateX(00px) rotate(-270deg) scale(0);
+	-o-transform: rotate(270deg) translateX(00px) rotate(-270deg) scale(0);
+	-ms-transform: rotate(270deg) translateX(00px) rotate(-270deg) scale(0);
+	transform: rotate(270deg) translateX(00px) rotate(-270deg) scale(0);
+}

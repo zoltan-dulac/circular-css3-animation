@@ -1,0 +1,57 @@
+body.big-page, #example {
+	background: #333333;
+	overflow: hidden;
+	background: url('../images/space.jpg');
+}
+
+.entry img {
+	border: none;
+}
+
+
+#mainContent, #example {
+	position: relative;
+	display: block;
+	width: 800px;
+	border: none;
+	margin: 0 auto;
+	height: 800px;
+	overflow: visible;
+}
+
+
+
+#sun {
+	position: absolute;
+	left: 336px;
+	top: 342px;
+}
+
+#saturn {
+	position: absolute;
+	
+	top: 292px;
+	left: 291px;
+	
+	
+	-webkit-transform: rotate(0deg) translateX(400px) rotate(0deg);
+	-moz-transform: rotate(0deg) translateX(400px) rotate(0deg);
+	-o-transform: rotate(0deg) translateX(400px) rotate(0deg);
+	-ms-transform: rotate(0deg) translateX(400px) rotate(0deg);
+	transform: rotate(0deg) translateX(400px) rotate(0deg);
+	
+	animation-duration: 4s;
+	animation-name: rotateSaturn;
+	animation-timing-function: linear;
+	
+	
+}
+
+#mainContent:active #saturn,
+#example:active #saturn {
+	-webkit-transform: rotate(360deg) translateX(400px) rotate(-360deg);
+	-moz-transform: rotate(360deg) translateX(400px) rotate(-360deg);
+	-o-transform: rotate(360deg) translateX(400px) rotate(-360deg);
+	-ms-transform: rotate(360deg) translateX(400px) rotate(-360deg);
+	transform: rotate(360deg) translateX(400px) rotate(-360deg);
+}
